@@ -6,12 +6,24 @@ module.exports = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    colors : {
+      'black' : '#000000',
+      'white': '#ffffff',
+      Orange : {
+        200 : "#FED7AA" ,
+        300 : "#FDBA74"
+      } ,
+      Gray : {
+        100 : "#9CA3AF" ,
+        300 : "#D1D5DB" ,
+        400 : "#9CA3AF" ,
+      }
+    },
     extend: {
       backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'header-pattern': "url('/images/headerBgDesktop.png')",
       },
+
     },
   },
   plugins: [],
