@@ -6,6 +6,13 @@ module.exports = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    screens: {
+      // => @media (min-width: px)
+      'sm': '640px',
+      'md': '768px',
+      'lg': '1024px',
+      'xl': '1280px',
+    },
     colors : {
       'black' : '#000000',
       'white': '#ffffff',
@@ -17,13 +24,24 @@ module.exports = {
         100 : "#9CA3AF" ,
         300 : "#D1D5DB" ,
         400 : "#9CA3AF" ,
-      }
+      },
+      Zinc : {
+        600 : "#52525B" ,
+        700 : "#3F3F46" ,
+      },
     },
     extend: {
       backgroundImage: {
         'header-pattern': "url('/images/headerBgDesktop.png')",
+        'body-pattern': "url('/images/bodyBg.png')",
       },
-
+      container : {
+        center : true ,
+        padding : {
+          DEFAULT : "1rem" ,
+          lg : "0.625rem"
+        }
+      }
     },
   },
   plugins: [],

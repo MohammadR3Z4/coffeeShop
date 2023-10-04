@@ -3,7 +3,7 @@ import React from 'react'
 import Image from 'next/image'
 
 // icons
-import { ShoppingCartIcon , MoonIcon ,ArrowLeftOnRectangleIcon } from '@heroicons/react/24/outline'
+import { ShoppingCartIcon , MoonIcon , ArrowLeftOnRectangleIcon } from '@heroicons/react/24/outline'
  
 const ItemNavbar = ( {item} ) =>{
     return(
@@ -14,7 +14,7 @@ const ItemNavbar = ( {item} ) =>{
 
 function Navbar() {
     return (
-        <div className='bg-black/50 fixed top-9 right-0 left-0 flex rounded-3xl w-[90%] mx-auto py-5 px-10 backdrop-blur-[6px]'>
+        <div className='bg-black/50 fixed top-9 right-0 left-0 flex rounded-3xl w-[90%] mx-auto py-5 px-10 backdrop-blur-[6px] z-10'>
             <Image className='me-9' src="/images/app-logo.png" width={59} height={56} alt="Logo" />
 
             <nav className='flex list-none gap-9 py-[14px]'>
