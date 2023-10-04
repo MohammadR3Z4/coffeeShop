@@ -32,8 +32,10 @@ function Navbar() {
             </div>
 
             <div className='border border-white/20 w-[1px] h-14 mx-10'></div>
-                <ArrowLeftOnRectangleIcon className='text-Orange-200 mt-[11px] rotate-180' width={34} height={34} />            
-            <button className='ms-[10px] text-xl font-normal cursor-pointer mb-2 text-Orange-200'> ورود | ثبت نام </button>
+            
+            <button className='ms-[10px] text-xl font-normal cursor-pointer mb-2 text-Orange-200 flex'>
+            <ArrowLeftOnRectangleIcon className='text-Orange-200 mt-[11px] rotate-180' width={34} height={34} />
+            ورود | ثبت نام </button>
         </div>
     )
 }

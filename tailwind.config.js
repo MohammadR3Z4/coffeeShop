@@ -21,7 +21,7 @@ module.exports = {
         300 : "#FDBA74"
       } ,
       Gray : {
-        100 : "#9CA3AF" ,
+        100 : "#F3F4F6" ,
         300 : "#D1D5DB" ,
         400 : "#9CA3AF" ,
       },
@@ -29,6 +29,17 @@ module.exports = {
         600 : "#52525B" ,
         700 : "#3F3F46" ,
       },
+      Teal : { 
+        600 : "#0D9488" ,
+        700 : "#0F766E" ,
+      },
+      Emerald : {
+        500 : "#10B981" ,
+        600 : "#059669" ,
+      },
+      Red : {
+        400 : "#F87171"
+      }
     },
     extend: {
       backgroundImage: {
