@@ -1,16 +1,18 @@
 import React from 'react'
 import Navbar from './navbar'
+import Resnavbar from './Resnavbar'
 
 function Header() {
     return (
-        <div className='bg-header-pattern w-screen bg-center bg-no-repeat bg-cover'>
+        <div className='md:bg-header-pattern bg-header-Respattern w-screen bg-center bg-no-repeat bg-cover'>
             <Navbar />
-            <div className='flex justify-end items-center  text-right container min-h-screen'>
+            <Resnavbar />
+            <div className='flex justify-end items-center text-right container md:min-h-screen'>
                 <div className='text-white'>
-                    <p className='text-[60px] font-bold leading-[62px] drop-shadow-[0_0_10px_rgba(0,0,0,0.40)]'>قهوه عربیکا تانزانیا</p>
-                    <p className='mt-2 text-[48px] leading-[64px] font-light drop-shadow-[0_0_10px_rgba(0,0,0,0.40)]'>یک فنجان بالانس !</p>
+                    <p className='xl:text-[60px] font-bold xl:leading-[62px] lg:text-[55px] lg:leading-[52px] md:text-[38px] md:leading-[40px] text-2xl drop-shadow-[0_0_10px_rgba(0,0,0,0.40)]'>قهوه عربیکا تانزانیا</p>
+                    <p className='mt-2 xl:text-[48px] xl:leading-[64px] lg:text-4xl md:text-2xl text-xl font-light drop-shadow-[0_0_10px_rgba(0,0,0,0.40)]'>یک فنجان بالانس !</p>
                     <div className='mt-8 border border-Orange-300 w-[100px] h-[2px] drop-shadow-[0_0_10px_0_rgba(0,0,0,0.30)]'></div>
-                    <p className='mt-8 text-2xl font-normal drop-shadow-[0_0_10px_rgba(0,0,0,0.40) w-[480px]'>قطعا نام آشنای عربیکا را شنیده اید، عربیکا یکی از گونه های قهوه است که در نواحی مختلف کمربند قهوه کشت میشود.</p>
+                    <p className='mt-8 xl:text-2xl font-normal lg:text-lg text-xs drop-shadow-[0_0_10px_rgba(0,0,0,0.40) lg:w-[480px] md:w-[268px] w-[200px]'>قطعا نام آشنای عربیکا را شنیده اید، عربیکا یکی از گونه های قهوه است که در نواحی مختلف کمربند قهوه کشت میشود.</p>
                 </div>
             </div>
             

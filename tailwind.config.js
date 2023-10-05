@@ -6,6 +6,7 @@ module.exports = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    
     screens: {
       // => @media (min-width: px)
       'sm': '640px',
@@ -13,6 +14,7 @@ module.exports = {
       'lg': '1024px',
       'xl': '1280px',
     },
+
     colors : {
       'black' : '#000000',
       'white': '#ffffff',
@@ -44,6 +46,7 @@ module.exports = {
     extend: {
       backgroundImage: {
         'header-pattern': "url('/images/headerBgDesktop.png')",
+        'header-Respattern' : "url('/images/headerBgMobile.png')",
         'body-pattern': "url('/images/bodyBg.png')",
       },
       container : {
