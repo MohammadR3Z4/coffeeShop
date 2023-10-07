@@ -7,7 +7,8 @@
             "Isavailable" : true ,
             "price" : 154000 ,
             "Isdiscount" : false ,
-            "discount" :  "" 
+            "discount" :  "" ,
+            "rate" : 4 
         },
         {
             "id" : "p2" ,
@@ -16,7 +17,8 @@
             "Isavailable" : false ,
             "price" : "" ,
             "Isdiscount" : false ,
-            "discount" : "" 
+            "discount" : "" ,
+            "rate" : 5 
         },
         {
             "id" : "p3" ,
@@ -25,7 +27,8 @@
             "Isavailable" : true ,
             "price" : 175000 ,
             "Isdiscount" : true ,
-            "discount" : 12  
+            "discount" : 12  ,
+            "rate" : 3.5 
         },
         {
             "id" : "p4" ,
@@ -34,7 +37,8 @@
             "Isavailable" : true ,
             "price" : 175000 ,
             "Isdiscount" : false ,
-            "discount" :  ""
+            "discount" :  "" ,
+            "rate" : 3 
         },
         {
             "id" : "p5" ,
@@ -43,7 +47,8 @@
             "Isavailable" : true ,
             "price" : 175000 ,
             "Isdiscount" : true ,
-            "discount" : 12  
+            "discount" : 12  ,
+            "rate" : 5 
         },
         {
             "id" : "p6" ,
@@ -52,7 +57,8 @@
             "Isavailable" : true ,
             "price" : 175000 ,
             "Isdiscount" : false ,
-            "discount" :  ""
+            "discount" :  "" ,
+            "rate" : 4 
         },
         {
             "id" : "p7" ,
@@ -61,7 +67,8 @@
             "Isavailable" : true ,
             "price" : 154000 ,
             "Isdiscount" : false ,
-            "discount" :  "" 
+            "discount" :  "" ,
+            "rate" : 3 
         },
         {
             "id" : "p8" ,
@@ -70,7 +77,53 @@
             "Isavailable" : false ,
             "price" : "" ,
             "Isdiscount" : false ,
-            "discount" : "" 
+            "discount" : "" ,
+            "rate" : 5
         }
+    ],
+
+
+    "QuickAccess" : [
+        {
+            "id" : "Q1" ,
+            "tittle" : "انواع قهوه" ,
+            "subTittle" : "ترکیبی و تک خاستگاه" ,
+            "image" : "/images/categories/category-right.jpg"
+        },
+        {
+            "id" : "Q2" ,
+            "tittle" : "پودر های فوری" ,
+            "subTittle" : "نسکافه ، هات چاکلت ، ماسالا" ,
+            "image" : "/images/categories/category-left.jpg"
+        }
+    ],
+
+    "Category" : [
+        {
+            "id" : "C1" ,
+            "image" : "/images/categories/category1.png" ,
+            "tittle" : "قهوه دمی و اسپرسو"
+        },
+        {
+            "id" : "C2" ,
+            "image" : "/images/categories/category2.png" ,
+            "tittle" : "لوازم جانبی و تجهیزات"
+        },
+        {
+            "id" : "C3" ,
+            "image" : "/images/categories/category3.png" ,
+            "tittle" : "اسپرسو ساز"
+        },
+        {
+            "id" : "C4" ,
+            "image" : "/images/categories/category4.png" ,
+            "tittle" : "پک تستر قهوه"
+        },
+        {
+            "id" : "C5" ,
+            "image" : "/images/categories/category5.png" ,
+            "tittle" : "قهوه ترک"
+        }
+        
     ]
 }

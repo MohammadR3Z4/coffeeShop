@@ -2,10 +2,13 @@ import Image from 'next/image'
 import React from 'react'
 import SectionNewProduct from '../template/sectionNewProduct'
 
+// Star components
+import StarRating from 'react-star-rating-component'
+
 // icon
 import { ArrowsRightLeftIcon , ShoppingCartIcon } from '@heroicons/react/24/outline';
 
-function ProductCard( {id , tittle , image , Isavailable , price , Isdiscount , discount} ) {
+function ProductCard( {id , tittle , image , Isavailable , price , Isdiscount , discount , rate} ) {
 
     const priceAfterDiscount = price - ( price * discount ) / 100 ;
 
@@ -29,6 +32,9 @@ function ProductCard( {id , tittle , image , Isavailable , price , Isdiscount , 
                         <ShoppingCartIcon className='absolute top-[8px] right-[6px]' width={22} height={22}/>
                     </div>
                     <ArrowsRightLeftIcon className='hover:text-Teal-600 ms-5 mt-[6px]' width={24} height={24} />
+                    <div className='ms-auto mt-[5px] text-xl cursor-default'>
+                        <StarRating className="cursor-default" name={id} value={rate} starCount={5} starColor={'#FACC15'} emptyStarColor={'#D1D5DB'} readOnly={true} /> 
+                    </div>
                 </div>
 
             </div>

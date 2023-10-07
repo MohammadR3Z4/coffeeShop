@@ -41,13 +41,15 @@ module.exports = {
       },
       Red : {
         400 : "#F87171"
-      }
+      },
     },
     extend: {
       backgroundImage: {
         'header-pattern': "url('/images/headerBgDesktop.png')",
         'header-Respattern' : "url('/images/headerBgMobile.png')",
         'body-pattern': "url('/images/bodyBg.png')",
+        'quick-access-1' : "url('/images/categories/category-left.jpg')",
+        'quick-access-2' : "url('/images/categories/category-right.jpg')",
       },
       container : {
         center : true ,

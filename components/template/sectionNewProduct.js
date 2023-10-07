@@ -7,6 +7,8 @@ import ProductCard from '../module/productCard'
 
 // icon
 import { ChevronLeftIcon } from "@heroicons/react/24/outline"
+import QuickAccessCard from '../module/quickAccessCard'
+import CategoryCard from '../module/categoryCard'
 
 
 function SectionNewProduct() {
@@ -27,6 +29,18 @@ function SectionNewProduct() {
                     <div className='mt-12 grid grid-cols-4 gap-5'>
                         {database.products.map(item => (
                             <ProductCard key={item.id} {...item} />
+                        ))}
+                    </div>
+
+                    <div className='mt-20 grid grid-cols-2 gap-5'>
+                        {database.QuickAccess.map(item => (
+                            <QuickAccessCard key={item.id} {...item} />
+                        ))}             
+                    </div>  
+                    
+                    <div className='mt-20 grid grid-cols-5 gap-[65px]'>
+                        {database.Category.map( item => (
+                            <CategoryCard key={item.id} {...item} />
                         ))}
                     </div>
                 </div>
