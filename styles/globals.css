@@ -5,9 +5,14 @@
 *{
   margin: 0;
   padding: 0;
-  list-style: none;
   text-decoration: none;
   box-sizing: border-box;
   direction: rtl;
   text-align: right;
+}
+
+.swiper-button-next::after , .swiper-button-prev::after {
+  width: 26px;
+  height: 26px;
+  color: #3F3F46;
 }

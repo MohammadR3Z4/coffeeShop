@@ -79,6 +79,86 @@
             "Isdiscount" : false ,
             "discount" : "" ,
             "rate" : 5
+        },
+        {
+            "id" : "p9" ,
+            "tittle" : "قهوه ترک بن مانو مقدار 250 گرم " ,
+            "image" : "/images/products/p5.png",
+            "Isavailable" : true ,
+            "price" : 175000 ,
+            "Isdiscount" : true ,
+            "discount" : 12 ,
+            "rate" : 5
+        },
+        {
+            "id" : "p10" ,
+            "tittle" : "قهوه ترک بن مانو مقدار 250 گرم " ,
+            "image" : "/images/products/p6.png",
+            "Isavailable" : false ,
+            "price" : "" ,
+            "Isdiscount" : false ,
+            "discount" : "" ,
+            "rate" : 3
+        },
+        {
+            "id" : "p11" ,
+            "tittle" : "قهوه ترک بن مانو مقدار 250 گرم " ,
+            "image" : "/images/products/p7.png",
+            "Isavailable" : true ,
+            "price" : 175000 ,
+            "Isdiscount" : false ,
+            "discount" : "" ,
+            "rate" : 4
+        },
+        {
+            "id" : "p12" ,
+            "tittle" : "قهوه ترک بن مانو مقدار 250 گرم " ,
+            "image" : "/images/products/p8.png",
+            "Isavailable" : true ,
+            "price" : 175000 ,
+            "Isdiscount" : false ,
+            "discount" : "" ,
+            "rate" : 2
+        },
+        {
+            "id" : "p13" ,
+            "tittle" : "قهوه ترک بن مانو مقدار 250 گرم " ,
+            "image" : "/images/products/p5.png",
+            "Isavailable" : true ,
+            "price" : 175000 ,
+            "Isdiscount" : true ,
+            "discount" : 12 ,
+            "rate" : 5
+        },
+        {
+            "id" : "p14" ,
+            "tittle" : "قهوه ترک بن مانو مقدار 250 گرم " ,
+            "image" : "/images/products/p6.png",
+            "Isavailable" : false ,
+            "price" : "" ,
+            "Isdiscount" : false ,
+            "discount" : "" ,
+            "rate" : 3
+        },
+        {
+            "id" : "p15" ,
+            "tittle" : "قهوه ترک بن مانو مقدار 250 گرم " ,
+            "image" : "/images/products/p7.png",
+            "Isavailable" : true ,
+            "price" : 175000 ,
+            "Isdiscount" : false ,
+            "discount" : "" ,
+            "rate" : 4
+        },
+        {
+            "id" : "p16" ,
+            "tittle" : "قهوه ترک بن مانو مقدار 250 گرم " ,
+            "image" : "/images/products/p8.png",
+            "Isavailable" : true ,
+            "price" : 175000 ,
+            "Isdiscount" : false ,
+            "discount" : "" ,
+            "rate" : 2
         }
     ],
 
@@ -125,5 +205,67 @@
             "tittle" : "قهوه ترک"
         }
         
+    ] ,
+    
+    "Blog" : [
+        {
+            "id" : "b1" ,
+            "image" : "/images/blogs/blog-1.png" ,
+            "tittle" : "طرز تهیه قهوه دمی با دستگاه اروپرس" ,
+            "day" : 18 ,
+            "month" : "مرداد" ,
+            "year" : 1402
+        } ,
+        {
+            "id" : "b2" ,
+            "image" : "/images/blogs/blog-2.png" ,
+            "tittle" : "یک نوشیدنی هیجان انگیز و پرکالری برای شروع روز" ,
+            "day" : 5 ,
+            "month" : "بهمن" ,
+            "year" : 1401
+        } ,
+        {
+            "id" : "b3" ,
+            "image" : "/images/blogs/blog-3.png" ,
+            "tittle" : "طرز تهیه یک فنجان کافه زینو برزیلی" ,
+            "day" : 10 ,
+            "month" : "فروردین" ,
+            "year" : 1402
+        } ,
+        {
+            "id" : "b4" ,
+            "image" : "/images/blogs/blog-4.png" ,
+            "tittle" : "طرز تهیه قهوه دالگونا مناسب روز‌های کرونایی" ,
+            "day" : 23 ,
+            "month" : "مهر" ,
+            "year" : 1402
+        } 
+    ],
+    
+    "Services" : [
+        {
+            "id" : "s1" ,
+            "image" : "/images/svgs/services/support.svg" ,
+            "title" : "پشتیبانی شبانه روزی" ,
+            "subtitle" : "7 روز هفته ، 24 ساعته"
+        },
+        {
+            "id" : "s2" ,
+            "image" : "/images/svgs/services/express-delivery.svg" ,
+            "title" : "امکان تحویل اکسپرس" ,
+            "subtitle" : "ارسال بسته با سرعت باد"
+        },
+        {
+            "id" : "s3" ,
+            "image" : "/images/svgs/services/coffee.svg" ,
+            "title" : "رست تخصصی" ,
+            "subtitle" : "تازه برشته شده و با کیفیت"
+        },
+        {
+            "id" : "s4" ,
+            "image" : "/images/svgs/services/pitcher.svg" ,
+            "title" : "اکسسوری قهوه" ,
+            "subtitle" : "وسایل و ادوات دم آوری"
+        }
     ]
 }

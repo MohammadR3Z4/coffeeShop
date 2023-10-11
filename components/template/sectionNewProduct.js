@@ -14,7 +14,7 @@ import CategoryCard from '../module/categoryCard'
 function SectionNewProduct() {
     return (
         <div className='flex'>
-            <div className='bg-body-pattern bg-cover bg-no-repeat w-screen max-h-[818px]'>
+            <div className='bg-body-pattern bg-no-repeat bg-auto w-screen '>
                 <div className='container mt-[192px]'>
                     <p className='text-Zinc-700 text-[48px] leading-[48px] font-medium'>جدیدترین محصولات</p>
                     <div className='flex justify-between mt-[6px]'>
@@ -27,7 +27,7 @@ function SectionNewProduct() {
                     </div>
 
                     <div className='mt-12 grid grid-cols-4 gap-5'>
-                        {database.products.map(item => (
+                        {database.products.slice(0,8).map(item => (
                             <ProductCard key={item.id} {...item} />
                         ))}
                     </div>
@@ -43,6 +43,7 @@ function SectionNewProduct() {
                             <CategoryCard key={item.id} {...item} />
                         ))}
                     </div>
+                    
                 </div>
             </div>
         </div>
