@@ -5,6 +5,7 @@ import SectionNewProduct from '../template/sectionNewProduct'
 
 // icon
 import { ArrowsRightLeftIcon , ShoppingCartIcon } from '@heroicons/react/24/outline';
+import StarRating from './starRating';
 
 function ProductCard( {id , tittle , image , Isavailable , price , Isdiscount , discount , rate} ) {
 
@@ -30,10 +31,11 @@ function ProductCard( {id , tittle , image , Isavailable , price , Isdiscount , 
                         <ShoppingCartIcon className='absolute top-[8px] right-[6px]' width={22} height={22}/>
                     </div>
                     <ArrowsRightLeftIcon className='hover:text-Teal-600 ms-5 mt-[6px]' width={24} height={24} />
-                    <div className='ms-auto mt-[5px] text-xl cursor-default'>
+                    <div className='ms-auto text-left flex mt-[5px] text-xl cursor-default'>
+                        <StarRating rate={rate} />
                     </div>
                 </div>
-
+                
             </div>
         </div>
     )

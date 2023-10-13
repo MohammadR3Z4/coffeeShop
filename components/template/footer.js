@@ -65,13 +65,14 @@ function Footer() {
                 </div>
 
             </div>
-{/* 
+            {/* 
             <div className='w-full border border-black/10 h-[1px] mt-11'></div>
 
             <div>
                 <p></p>
                 <p> © MohammadReza Ghasemnejad 2023. All rights reserved . </p>
-            </div> */}
+            </div> 
+            */}
         </div>
     )
 }

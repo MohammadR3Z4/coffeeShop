@@ -26,7 +26,7 @@ function SectionNewProduct() {
                         </Link> 
                     </div>
 
-                    <div className='mt-12 grid grid-cols-4 gap-5'>
+                    <div className='mt-12 grid lg:grid-cols-4 grid-cols-2 gap-5'>
                         {database.products.slice(0,8).map(item => (
                             <ProductCard key={item.id} {...item} />
                         ))}

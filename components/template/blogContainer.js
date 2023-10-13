@@ -16,7 +16,7 @@ function BlogContainer() {
                 </Link>
             </div>
 
-            <div className='grid grid-cols-4 mt-12'>
+            <div className='grid lg:grid-cols-4 grid-cols-2 mt-12'>
                 {db.Blog.map(item => (
                     <Blog key={item.id} {...item} />
                 ))}
