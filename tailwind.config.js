@@ -6,6 +6,10 @@ module.exports = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+
+    fontFamily : {
+      Vazir : [ "Vazir" , "sans-serif" ] 
+    } ,
     
     screens: {
       // => @media (min-width: px)
@@ -57,7 +61,7 @@ module.exports = {
       container : {
         center : true ,
         padding : {
-          DEFAULT : "1rem" ,
+          DEFAULT : "2rem" ,
           lg : "0.625rem"
         }
       }

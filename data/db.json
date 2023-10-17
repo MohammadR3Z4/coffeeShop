@@ -168,13 +168,13 @@
             "id" : "Q1" ,
             "tittle" : "انواع قهوه" ,
             "subTittle" : "ترکیبی و تک خاستگاه" ,
-            "image" : "/images/categories/category-right.jpg"
+            "image" : "/images/categories/category-right.png"
         },
         {
             "id" : "Q2" ,
             "tittle" : "پودر های فوری" ,
             "subTittle" : "نسکافه ، هات چاکلت ، ماسالا" ,
-            "image" : "/images/categories/category-left.jpg"
+            "image" : "/images/categories/category-left.png"
         }
     ],
 

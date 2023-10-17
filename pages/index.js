@@ -10,11 +10,13 @@ import SectionServices from '@/components/template/sectionServices'
 
 export default function Home() {
   return (
-    <div>
+    <div className='bg-Gray-100 font-Vazir'>
       <Header status="homePage" />
       <SectionNewProduct />
       <SectionBestSelling />
-      <CofeeClub />
+      <div className='container'>
+        <CofeeClub />
+      </div>
       <BlogContainer />
       <SectionContactUs />
       <SectionServices />

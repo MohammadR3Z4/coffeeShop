@@ -5,12 +5,19 @@
 /* @font-face {
   font-family: "IRANSansFont";
   src: url("/public/fonts/IRANSansFont.ttf");
-}
-
-@font-face {
-  font-family: "Vazir";
-  src: url("/public/fonts/Vazir.woff");
 } */
+
+@layer base {
+  @font-face {
+    font-family: "Vazir";
+    src: url(../public/fonts/Vazir.woff);
+  }
+
+  @font-face {
+    font-family: "IRANSansFont";
+    src: url(/public/fonts/IRANSansFont.ttf);
+  }
+}
 
 *{
   margin: 0;

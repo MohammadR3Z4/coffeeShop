@@ -13,32 +13,32 @@ import CategoryCard from '../module/categoryCard'
 
 function SectionNewProduct() {
     return (
-        <div className='flex'>
-            <div className='bg-body-pattern bg-no-repeat bg-auto w-screen '>
-                <div className='container mt-[192px]'>
-                    <p className='text-Zinc-700 text-[48px] leading-[48px] font-medium'>جدیدترین محصولات</p>
+        <div className='flex font-Vazir'>
+            <div className='lg:bg-body-pattern lg:bg-no-repeat bg-Gray-100 font-Vazir lg:bg-auto w-screen '>
+                <div className='container lg:mt-[192px] md:mt-28 mt-8'>
+                    <p className='text-Zinc-700 lg:text-[48px] lg:leading-[48px] font-medium md:text-4xl text-2xl'>جدیدترین محصولات</p>
                     <div className='flex justify-between mt-[6px]'>
-                        <p className='text-Zinc-700 text-[30px] leading-[48px] font-medium'>فرآوری شده از دانه قهوه</p>
+                        <p className='text-Zinc-700 lg:text-[30px] lg:leading-[48px] md:text-2xl text-lg font-light'>فرآوری شده از دانه قهوه</p>
                         <Link className='flex text-Orange-300' href={"/#"}> 
-                            <p className='text-xl font-normal flex rounded-[6px] h-10 py-[5] px-3 tracking-[-1.3px] hover:bg-Orange-200/20'>مشاهده همه محصولات 
-                            <ChevronLeftIcon width={20} height={20} className='mt-2 ms-1' /> 
+                            <p className='lg:text-xl md:text-lg text-base font-normal flex rounded-[6px] md:h-10 py-[5px] px-3 lg:tracking-[-1.3px] hover:bg-Orange-200/20'>مشاهده همه <span className='md:ms-1 md:flex hidden'> محصولات </span> 
+                            <ChevronLeftIcon width={20} height={20} className='mt-1 ms-1' /> 
                             </p> 
                         </Link> 
                     </div>
 
-                    <div className='mt-12 grid lg:grid-cols-4 grid-cols-2 gap-5'>
+                    <div className='md:mt-12 mt-5 grid lg:grid-cols-4 grid-cols-2 gap-5'>
                         {database.products.slice(0,8).map(item => (
                             <ProductCard key={item.id} {...item} />
                         ))}
                     </div>
 
-                    <div className='mt-20 grid grid-cols-2 gap-5'>
+                    <div className='md:mt-20 mt-8 grid md:grid-cols-2 grid-cols-1 gap-5'>
                         {database.QuickAccess.map(item => (
                             <QuickAccessCard key={item.id} {...item} />
                         ))}             
                     </div>  
                     
-                    <div className='mt-20 grid grid-cols-5 gap-[65px]'>
+                    <div className='md:mt-20 mt-10 grid md:grid-cols-5 grid-cols-3 mx-auto gap-[65px]'>
                         {database.Category.map( item => (
                             <CategoryCard key={item.id} {...item} />
                         ))}
