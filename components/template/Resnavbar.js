@@ -17,6 +17,8 @@ import {
   MoonIcon
 } from "@heroicons/react/24/outline";
 import Link from "next/link";
+import SignUp from "../module/logIn";
+import Login from "../module/logIn";
 
 function Resnavbar({ status }) {
 
@@ -26,6 +28,9 @@ function Resnavbar({ status }) {
     const [IsopenMenu , setIsopenMenu] = useState(false)
     const IsopenMenuHandeler = () => { setIsopenMenu(!IsopenMenu) }
 
+    const [IsModalOpen , setIsModalOpen] = useState(false)
+    const IsModalOpenHandeler = () => { setIsModalOpen(!IsModalOpen) }
+
     // temp 
     const temp = (e) => {
       if (e.target.id === "temp") {
@@ -34,6 +39,7 @@ function Resnavbar({ status }) {
     }
 
   return (
+    <>
     <div className="fixed top-0 right-0 left-0 z-20">
       <div className={`bg-white h-16 md:hidden flex justify-between py-3 px-4`}>
         <div>
@@ -48,10 +54,12 @@ function Resnavbar({ status }) {
             alt="logo-type"
           />
         </div>
+
         <div className="flex items-center gap-4 mt-2">
-          <ArrowLeftOnRectangleIcon className="rotate-180 cursor-pointer" width={24} height={24} />
+          <ArrowLeftOnRectangleIcon className="rotate-180 cursor-pointer" onClick={IsModalOpenHandeler} width={24} height={24} />
           <ShoppingCartIcon className="cursor-pointer" width={24} height={24} />
         </div>
+
       </div>
 
       <div className={`${IsopenMenu ? "fixed inset-0" : "hidden"} bg-black/60 w-full h-full z-20`} 
@@ -171,6 +179,9 @@ function Resnavbar({ status }) {
       </div>
       </div>
     </div>
+
+      <Login IsModalOpen={IsModalOpen} setModal={setIsModalOpen} />
+    </>
   );
 }
 

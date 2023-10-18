@@ -3,8 +3,9 @@ import Navbar from './navbar'
 import Resnavbar from './Resnavbar'
 
 function Header( {status} ) {
+    
     return (
-        <div className='md:bg-header-pattern m-0 bg-header-Respattern font-Vazir w-screen md:h-auto bg-center bg-no-repeat bg-cover  '>
+        <div className='md:bg-header-pattern m-0 bg-header-Respattern font-Vazir w-full md:h-auto bg-center bg-no-repeat bg-cover bg-scroll'>
             <Navbar />
             <Resnavbar status={status} />
             <div className='flex justify-end py-[30px] px-9 items-center text-right container md:min-h-screen'>

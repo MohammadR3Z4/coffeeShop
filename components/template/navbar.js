@@ -1,9 +1,11 @@
 import Link from 'next/link'
-import React from 'react'
+import React , { useState } from 'react'
 import Image from 'next/image'
 
 // icons
 import { ShoppingCartIcon , MoonIcon , ArrowLeftOnRectangleIcon } from '@heroicons/react/24/outline'
+import SignUp from '../module/logIn'
+import Login from '../module/logIn'
  
 const ItemNavbar = ( {item} ) =>{
     return(
@@ -13,7 +15,12 @@ const ItemNavbar = ( {item} ) =>{
 
 
 function Navbar( ) {
+
+    const [IsModalOpen , setIsModalOpen] = useState(false)
+    const IsModalOpenHandeler = () => { setIsModalOpen(!IsModalOpen) }
+
     return (
+        <>
         <div className='bg-black/50 fixed top-9 right-0 left-0 md:flex hidden rounded-3xl lg:w-[90%] md:w-[95%] mx-auto py-5 xl:px-10 px-5 backdrop-blur-[6px] z-10'>
             <Image className='xl:me-9 me-5 xl:w-[59px] xl:h-[56px] w-[30px] h-[33px] my-auto' src="/images/app-logo.png" width={59} height={56} alt="Logo" />
 
@@ -33,10 +40,16 @@ function Navbar( ) {
 
             <div className='border border-white/20 w-[1px] xl:h-14 h-9 xl:mx-10 lg:mx-6 md:mx-2'></div>
             
-            <button className='ms-[10px] xl:text-xl lg:text-lg md:text-base my-auto xl:font-normal cursor-pointer text-Orange-200 flex justify-center'>
-            <ArrowLeftOnRectangleIcon className='text-Orange-200 rotate-180 lg:me-[10px] md:me-1 mt-1 xl:w-[34px] xl:h-[34px] w-[25px] h-[25px]' width={34} height={34} />
-            ورود | ثبت نام </button>
+            <button className='ms-[10px] xl:text-xl lg:text-lg md:text-base my-auto xl:font-normal cursor-pointer text-Orange-200 flex justify-center' onClick={IsModalOpenHandeler}>
+                <ArrowLeftOnRectangleIcon className='text-Orange-200 rotate-180 lg:me-[10px] md:me-1 mt-1 xl:w-[34px] xl:h-[34px] w-[25px] h-[25px]' width={34} height={34} />
+                ورود | ثبت نام 
+            </button>
         </div>
+
+        <SignUp IsModalOpen={IsModalOpen} setModal={setIsModalOpen} /> 
+        {/* <Login IsModalOpen={IsModalOpen} setModal={setIsModalOpen} /> */}
+
+        </>
     )
 }
 
