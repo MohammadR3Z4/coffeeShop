@@ -3,53 +3,35 @@ import React, { useEffect, useState } from 'react'
 import Footer from '@/components/template/footer'
 import Header from '@/components/template/header'
 import ProductCard from '@/components/module/productCard'
-import db from "@/data/db.json"
 
 // icons
 import { MagnifyingGlassIcon } from '@heroicons/react/24/outline'
 
-const SortItem = ( {item , value , setSort} ) => {
-    return <div value={value} 
-        onClick={() => {
-        (e) => {setSort(e.target.value)} ;
-        console.log(value);
-        }} 
-    className='text-Zinc-700 md:text-lg text-sm cursor-pointer'> {item} </div>
-}
-
-function Store() {
+function Store( { APIproducts } ) {
 
     // search
     const [inputSearch , setInputSearch] = useState("")
-    const [products , setProducts] = useState([... db.products])
+    const [products , setProducts] = useState([... APIproducts])
 
     useEffect( () => {
-
-        const newProducts = db.products.filter((product) => product.tittle.includes(inputSearch)) ;
+        const newProducts = [... APIproducts].filter((product) => product.tittle.includes(inputSearch)) ;
         setProducts(newProducts)
-
     }, [inputSearch] )
 
     // sort 
-    const [sort , setSort] = useState("");
+    const [sort , setSort] = useState("best");
 
     useEffect( () => {
         if (sort === "highPrice") {
-            const newProducts = [... products].sort((a , b) => a.price - b.price)
+            const newProducts = [... products].sort((a , b) => b.price - a.price)
+            console.log("newProducts" , newProducts);
             setProducts(newProducts)
-            console.log(newProducts);
-            console.log("highhhhhhhh");
         } else if (sort === "lowPrice") {
-            const newProducts = [... products].sort((a , b) => {
-                if (Isavailable) {
-                    a.price - b.price
-                }
-            })
-            setProducts(newProducts)
+            const newProducts = [... products].sort((a , b) => a.price - b.price)
+            setProducts(newProducts) ;
         } else {
             const newProducts = [... products].sort((a , b) => b.rate - a.rate)
             setProducts(newProducts) 
-            console.log("ratttttteeeeee");
         }
     }, [sort] )
 
@@ -66,9 +48,9 @@ function Store() {
                     <div className='flex justify-between items-center mt-10 w-full'>
                         <div className='flex gap-4'>
                             <p className='text-Zinc-700 lg:text-xl md:text-lg text-base font-light'> مرتب سازی : </p>
-                            <SortItem item="منتخب" value="best" setSort={setSort} />
-                            <SortItem item="گران ترین" value="highPrice" setSort={setSort} />
-                            <SortItem item="ارزان ترین" value="lowPrice" setSort={setSort} />
+                            <button onClick={() => {setSort("best")}} className={`${sort === "best" ? "text-Orange-300 underline" : "text-Zinc-700"} md:text-lg text-sm cursor-pointer`}>منتخب </button>
+                            <button onClick={() => {setSort("highPrice")}} className={`${ sort === "highPrice" ? "text-Orange-300 underline" : "text-Zinc-700" }  md:text-lg text-sm cursor-pointer `}>گران ترین </button>
+                            <button onClick={() => {setSort("lowPrice")}} className={`${sort === "lowPrice" ? "text-Orange-300 underline" : "text-Zinc-700"}  md:text-lg text-sm cursor-pointertext-Zinc-700`} >ارزان ترین </button>
                         </div>
                         
                         <div className='w-2/5 '>
@@ -86,7 +68,7 @@ function Store() {
 
                 <div className='grid lg:grid-cols-4 grid-cols-2 gap-8 mt-14'>
                     {products.map(item => (
-                        <ProductCard key={item.id} {...item} />
+                        <ProductCard key={item.id} item={... item} />
                     ))}
                 </div>
 
@@ -95,6 +77,17 @@ function Store() {
             <Footer />
         </div>
     )
+}
+
+export async function getStaticProps() {
+    const res = await fetch(`https://mocki.io/v1/59cccc02-0126-40c7-862f-339195678773`)
+    const data = await res.json()
+   
+    return { 
+        props: { 
+            APIproducts : data.products, 
+        }
+    }
 }
 
 export default Store

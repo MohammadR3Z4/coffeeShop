@@ -6,24 +6,21 @@ import React, { useState } from 'react'
 import { XMarkIcon , PhoneIcon , UserIcon , AtSymbolIcon , LockClosedIcon } from '@heroicons/react/24/outline'
 import Login from './logIn'
 
-function SignUp( { IsModalSignUpOpen , setIsModalSignUpOpen}) {
-
-    // Sign UP
-    const IsModalSignUpOpenHandeler = () => { setIsModalSignUpOpen(!IsModalSignUpOpen) }
+function SignUp( {IsModalOpen , setIsModalOpen , IsModalOpenHandeler , status , setStatus } ) {
 
     const temp = (e) => {
         if(e.target.id === "temp") {
-            IsModalSignUpOpenHandeler()
+            IsModalOpenHandeler()
         }
     }
 
     return (
         <>
-            <div className={`${IsModalSignUpOpen ?  "fixed inset-0" : "hidden"} z-20 bg-black/40 backdrop-blur-sm flex justify-center items-center`} onClick={temp} id='temp'>
+            <div className={`${IsModalOpen && status === "signUp" ?  "fixed inset-0" : "hidden"} flex justify-center items-center z-20 bg-black/40 backdrop-blur-sm`} onClick={temp} id='temp'>
                 <div className={` bg-white md:w-1/2 w-9/12 rounded-lg`}>
                     <div className='' >
                         <XMarkIcon className={`mt-4 ms-4 hover:bg-Gray-100 rounded-full cursor-pointer w-5 h-5`} 
-                        onClick={IsModalSignUpOpenHandeler} width={20} height={20} />
+                        onClick={IsModalOpenHandeler} width={20} height={20} />
                     </div>
 
                     <div className='container flex flex-col justify-center items-center mb-6'>
@@ -36,8 +33,9 @@ function SignUp( { IsModalSignUpOpen , setIsModalSignUpOpen}) {
                         <div className='flex gap-3 flex-col items-center'>
                             <p className='lg:text-4xl md:text-2xl text-lg font-semibold'> عضویت </p>
                             <p className='lg:text-xl md:text-lg text-base font-normal'> قبلا ثبت نام کرده اید ؟ 
-                                <Link className='lg:text-xl md:text-lg text-base font-normal text-Orange-300 underline' href="#" onClick={ () => {
-                                     ;
+                                <Link className='lg:text-xl md:text-lg text-base font-normal text-Orange-300 underline' href="#" 
+                                onClick={ () => {
+                                    setStatus("login") ;
                                 }}> وارد شوید </Link>
                             </p>    
                         </div>

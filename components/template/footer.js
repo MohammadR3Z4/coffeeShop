@@ -16,13 +16,14 @@ function Footer() {
         <div className="flex flex-col container">
           <div className="flex flex-row">
             <Image
+            className="w-auto h-auto"
               src="/images/svgs/logo-gray.svg"
               width={57}
               height={54}
               alt="logo"
             />
             <Image
-              className="ms-5"
+              className="ms-5 w-auto h-auto"
               src="/images/svgs/logo-type.svg"
               width={138}
               height={54}
@@ -107,7 +108,7 @@ function Footer() {
               <button className="border flex justify-center items-center border-Orange-200 my-auto py-[9px] lg:px-[30px] md:px-6 px-[15px] rounded-xl gap-1 text-Orange-200 lg:text-xl md:text-lg text-base font-medium directionLTR">
                 <Image
                   className="md:w-[38px] md:h-[38px] w-[26px] h-[26px]"
-                  src="images/svgs/instagram-orange.svg"
+                  src="/images/svgs/instagram-orange.svg"
                   width={38}
                   height={38}
                   alt="instagram"
@@ -117,7 +118,7 @@ function Footer() {
               <button className="flex justify-center items-center gap-1 text-Zinc-700 py-[10px] md:px-[30px] px-[15px] rounded-xl bg-gradient-to-l from-Orange-300 to-Orange-200 lg:text-xl md:text-lg text-base font-medium directionLTR">
                 <Image
                   className="md:w-[38px] md:h-[38px] w-[26px] h-[26px]"
-                  src="images/svgs/telegram.svg"
+                  src="/images/svgs/telegram.svg"
                   width={38}
                   height={38}
                   alt="telegram"

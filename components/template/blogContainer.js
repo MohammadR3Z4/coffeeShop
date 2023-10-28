@@ -1,12 +1,31 @@
 import Link from 'next/link'
-import React from 'react'
-import db from "@/data/db.json"
+import React, { useEffect , useState} from 'react'
+import Blog from '../module/blog'
 
 // icon 
 import { ChevronLeftIcon } from '@heroicons/react/24/outline'
-import Blog from '../module/blog'
+
 
 function BlogContainer() {
+
+    const axios = require('axios');
+
+    const [blog, setBlog] = useState([]);
+
+    useEffect(() => {
+        async function getUser() {
+            try {
+              const response = await axios.get('https://mocki.io/v1/59cccc02-0126-40c7-862f-339195678773');
+              setBlog(response.data.Blog)
+            } catch (error) {
+              console.error(error);
+            }
+        }
+        getUser()
+    }, []);
+
+
+
     return (
         <div className='container mt-20'>
             <div className='flex justify-between'>
@@ -17,7 +36,7 @@ function BlogContainer() {
             </div>
 
             <div className='grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5 lg:mt-12 md:mt-8 mt-5'>
-                {db.Blog.map(item => (
+                {blog.map(item => (
                     <Blog key={item.id} {...item} />
                 ))}
             </div>

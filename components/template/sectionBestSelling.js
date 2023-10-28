@@ -1,5 +1,4 @@
 import React from 'react'
-import db from "@/data/db.json"
 import ProductCard from '../module/productCard'
 import CofeeClub from './cofeeClub'
 import { useEffect, useState } from 'react'
@@ -17,9 +16,25 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
 
+function SectionBestSelling( ) {
 
+    // AXIOS API 
+    const axios = require('axios');
 
-function SectionBestSelling() {
+    const [products, setProducts] = useState([]);
+
+    useEffect(() => {
+        async function getUser() {
+            try {
+              const response = await axios.get('https://mocki.io/v1/59cccc02-0126-40c7-862f-339195678773');
+              setProducts(response.data.products)
+            } catch (error) {
+              console.error(error);
+            }
+        }
+        getUser()
+    }, []);
+
 
     const [windowSize, setWindowSize] = useState({ width: 0 });
     const [countOfSlides , setcountOfSlides] = useState(4)
@@ -74,9 +89,9 @@ function SectionBestSelling() {
                 navigation={true}
                 modules={[FreeMode , Navigation]}
             >
-                {db.products.slice(8).map(item => (
+                {products.slice(8).map(item => (
                     <SwiperSlide key={item.id}>
-                        <ProductCard  {...item} />
+                        <ProductCard  item={...item} />
                     </SwiperSlide>
                 ))}
             </Swiper>
