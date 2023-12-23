@@ -20,7 +20,7 @@ function Navbar( ) {
     const [IsModalOpen , setIsModalOpen] = useState(false)
     const IsModalOpenHandeler = () => { setIsModalOpen(!IsModalOpen) }
 
-    // state login & signup
+    // state login & signup & enterCode
     const [status , setStatus ] =  useState("")
 
     return (

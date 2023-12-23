@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
 import Link from 'next/link';
@@ -6,15 +6,24 @@ import Link from 'next/link';
 import Footer from '@/components/template/footer'
 import Header from '@/components/template/header'
 import StarRating from '@/components/module/starRating'
+import Introduction from '@/components/module/commentSections/Introduction';
+import Comments from '@/components/module/commentSections/comments';
+import Questions from '@/components/module/commentSections/questions';
+import FaqSection from '@/components/module/commentSections/FaqSection';
+import db from '@/data/faq.json'
+
 
 function SingleProductPage( { APIproducts } ) {
     
     const router = useRouter();
     const { productID } = router.query;
 
+    // STATUS FOR COMMENTS SECTION 
+    const [status , setStatus] = useState("Introduction") ;
+    console.log("status" , status);
+
     // find the product from URL
     const product = APIproducts.find(item => item.id.toString() === productID);
-
     const priceAfterDiscount = product.price - ( product.price * product.discount ) / 100 ;
 
         return (
@@ -54,6 +63,31 @@ function SingleProductPage( { APIproducts } ) {
                          </div>
                      </div>
                  </div>
+             </div>
+
+             <div className='my-10 container'>
+                <ul className='flex gap-8'>
+                    <li className={`${status === "Introduction" ? "text-Orange-300" : "text-gray-500"} lg:text-xl md:text-lg text-base font-semibold cursor-pointer`} 
+                    onClick={() => {setStatus("Introduction")}} > معرفی </li>
+                    <li className={`${status === "Comments" ? "text-Orange-300" : "text-gray-500"} lg:text-xl md:text-lg text-base font-semibold cursor-pointer`} 
+                    onClick={() => {setStatus("Comments")}} > نظرات </li>
+                    <li className={`${status === "Questions" ? "text-Orange-300" : "text-gray-500"} lg:text-xl md:text-lg text-base font-semibold cursor-pointer`} 
+                    onClick={() => {setStatus("Questions")}} > پرسش ها </li>
+                    <li className={`${status === "Faq" ? "text-Orange-300" : "text-gray-500"} lg:text-xl md:text-lg text-base font-semibold cursor-pointer`} 
+                    onClick={() => {setStatus("Faq")}} > سوالات متداول </li>
+                </ul>
+                <div className='border border-Gray-400 w-full h-[1px] my-7'></div>
+                
+                <Introduction status={status} />
+                <Comments status={status} />
+                <Questions status={status} />
+
+                <div className='flex flex-col gap-5'>
+                    {db.FAQ.map(item => (
+                        <FaqSection key={item.id} {... item} status={status} />
+                    ))} 
+                </div>
+                
              </div>
              <Footer />
          </div>
